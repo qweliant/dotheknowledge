@@ -9,14 +9,20 @@ interface Todo {
 }
 
 axios.get(url).then(res =>  {
+ 
+  try {
   const todo = res.data as Todo
-
+  
   const id = todo.id
   // const finished = todo.finished |||--> bug because finsihed is not on the response object
   const title = todo.title
   const completed = todo.completed
 
   logTodo(id, title, completed)
+}
+catch(error) {
+  console.log("Ohhh noooooo, you had error", error)
+}
 });
 
 const logTodo = (id: number, title: string, completed: boolean) => {
