@@ -1,3 +1,5 @@
+/// <reference types="@types/google.maps" />
+
 import { User } from "./User";
 import { Company } from "./Company";
 
@@ -11,3 +13,10 @@ console.log(
   "be saying",
   company.catchPhrase
 );
+
+// that hit diff. i can do all my ts here and do what on client?
+// render javscript map compoent as part of script. neat and simple
+new google.maps.Map(document.getElementById("map") as HTMLElement, {
+  zoom: 1,
+  center: { lat: company.location.lat, lng: company.location.lon },
+});

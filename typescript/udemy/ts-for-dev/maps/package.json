@@ -2,5 +2,8 @@
   "devDependencies": {
     "@faker-js/faker": "^8.0.1",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/google.maps": "^3.53.1"
   }
 }
