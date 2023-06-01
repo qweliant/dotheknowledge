@@ -2,7 +2,6 @@ package lexer
 
 import (
 	"testing"
-
 	"goc/token"
 )
 
@@ -33,7 +32,7 @@ func TestNextToken(t *testing.T) {
 			t.Fatalf("Tests[%d] - tokenType wrong. expected=%q, got=%q", i, tt.expectedType, tok.Type)
 		}
 
-		if tok.Type != tt.expectedLiteral {
+		if tok.Literal != tt.expectedLiteral {
 			t.Fatalf("Tests[%d] - tokenType wrong. expected=%q, got=%q", i, tt.expectedLiteral, tok.Literal)
 
 		}
